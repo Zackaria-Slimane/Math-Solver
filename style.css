@@ -1,0 +1,31 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	text-align: center;
+	max-height: 100vh;
+	height: 50vh;
+	padding: 5rem;
+	margin-top: 5rem;
+	background: linear-gradient(15deg, cyan, lightcoral);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.submit-btn {
+	padding: 0.5em;
+	border-radius: 30%;
+	background-color: aquamarine;
+	cursor: pointer;
+}
+
+#results {
+	margin-top: 2rem;
+	border: 2px solid black;
+	padding: 0.25rem;
+	text-align: start;
+	border-style: inset;
+}
