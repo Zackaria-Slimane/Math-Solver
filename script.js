@@ -43,19 +43,19 @@ function parse(equation) {
 // math operatoins
 
 function doMath({ operand1, operand2, operation }) {
-	const number1 = parseFloat(operand1);
-	const number2 = parseFloat(operand2);
+	const x = parseFloat(operand1);
+	const y = parseFloat(operand2);
 
 	switch (operation) {
 		case "*":
-			return number1 * number2;
+			return multiply(x, y);
 		case "/":
-			return number1 / number2;
+			return divide(x, y);
 		case "+":
-			return number1 + number2;
+			return sum(x, y);
 		case "-":
-			return number1 - number2;
+			return minus(x, y);
 		case "^":
-			return number1 ** number2;
+			return power(x, y);
 	}
 }

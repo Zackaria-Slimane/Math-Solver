@@ -1,42 +1,22 @@
-export function sum(...arg) {
-	let result = 0;
-	for (let i of arg) {
-		result += i;
-	}
-	return result;
+export function sum(x, y) {
+	return x + y;
 }
-export function minus(...arg) {
-	let result = 0;
-	for (let i of arg) {
-		result -= i;
-	}
-	return result;
+export function minus(x, y) {
+	return x - y;
 }
 
-export function multiply(...arg) {
-	let result = 0;
-	for (let i of arg) {
-		result *= i;
-	}
-	return result;
+export function multiply(x, y) {
+	return x * y;
 }
 
-export function divide(...arg) {
-	let result = 0;
-	for (let i in arg) {
-		result /= i;
-	}
-	return result;
+export function divide(x, y) {
+	return x / y;
 }
 
 export function power(a, b) {
-	let result = 0;
-	result = Math.pow(a, b);
-	return result;
+	return Math.pow(a, b);
 }
 
 export function square(a, b) {
-	let result = 0;
-	result = Math.sqrt(a, b);
-	return result;
+	return Math.sqrt(a, b);
 }
