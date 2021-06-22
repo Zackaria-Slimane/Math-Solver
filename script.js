@@ -6,9 +6,9 @@ const resultSection = document.querySelector("#results");
 
 // regex section
 const parRegex = /\((?<equation>[^\(\)]*)\)/;
-const multipleDivideRegex = /(?<operand1>\S+)\s*(?<operation>[\/\*])\s*(?<operand2>\S+)/;
-const expRegex = /(?<operand1>\S+)\s*(?<operation>\^)\s*(?<operand2>\S+)/;
-const plusMinusRegex = /(?<operand1>\S+)\s*(?<operation>(?<!e)[\-\+])\s*(?<operand2>\S+)/;
+const multipleDivideRegex = /(?<n1>\S+)\s*(?<step>[\/\*])\s*(?<n2>\S+)/;
+const expRegex = /(?<n1>\S+)\s*(?<step>\^)\s*(?<n2>\S+)/;
+const plusMinusRegex = /(?<n1>\S+)\s*(?<step>(?<!e)[\-\+])\s*(?<n2>\S+)/;
 
 equationForm.addEventListener("submit", (e) => {
 	e.preventDefault();
@@ -42,11 +42,11 @@ function parse(equation) {
 
 // math operatoins
 
-function doMath({ operand1, operand2, operation }) {
-	const x = parseFloat(operand1);
-	const y = parseFloat(operand2);
+function doMath({ n1, n2, step }) {
+	const x = parseFloat(n1);
+	const y = parseFloat(n2);
 
-	switch (operation) {
+	switch (step) {
 		case "*":
 			return multiply(x, y);
 		case "/":
