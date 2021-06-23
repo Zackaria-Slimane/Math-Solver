@@ -7,8 +7,8 @@ const resultSection = document.querySelector("#results");
 // regex section
 const parRegex = /\((?<equation>[^\(\)]*)\)/;
 const multipleDivideRegex = /(?<n1>\S+)\s*(?<step>[\/\*])\s*(?<n2>\S+)/;
-const expRegex = /(?<n1>\S+)\s*(?<step>\^)\s*(?<n2>\S+)/;
 const plusMinusRegex = /(?<n1>\S+)\s*(?<step>(?<!e)[\-\+])\s*(?<n2>\S+)/;
+const expRegex = /(?<n1>\S+)\s*(?<step>\^)\s*(?<n2>\S+)/;
 
 equationForm.addEventListener("submit", (e) => {
 	e.preventDefault();
